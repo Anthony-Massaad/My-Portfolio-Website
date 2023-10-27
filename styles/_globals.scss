@@ -1,0 +1,60 @@
+@import "./inits/reset";
+@import "./inits/variables";
+@import "./inits/fonts";
+@import "./inits/reusableClasses";
+
+html {
+  font-size: $default_font_size;
+
+  @include md-breakpoint {
+    font-size: $default_font_size - 4px;
+  }
+
+  @include lg-breakpoint {
+    font-size: $default_font_size - 2px;
+  }
+}
+
+* {
+  z-index: 10;
+}
+
+body.light {
+  --bg-color: rgb(249 250 251);
+  --txt-color: rgb(3 7 18);
+  --header-link-unhover-color: rgb(107 114 128);
+  --alternate-button-color: rgb(17, 24, 39);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  font-family: silka, serif, Helvetica, sans-serif !important;
+  position: relative;
+  font-style: normal;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+main {
+  overflow: hidden;
+}
+
+@import "./providers/toast";
+@import "./components/container";
+@import "./components/button";
+@import "./components/sectionHeading";
+@import "./components/header";
+@import "./components/introduction";
+@import "./components/about";
+@import "./components/experience";
+@import "./components/skills";
+@import "./components/projects";
+@import "./components/education";
+@import "./components/contact";
+@import "./components/footer";
