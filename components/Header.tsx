@@ -3,7 +3,7 @@
 import { FC, useContext, useEffect, useRef, useState } from "react";
 import { map } from "lodash";
 import Link from "next/link";
-import { Variants, motion, useCycle } from "framer-motion";
+import { Variants, motion, useAnimation, useCycle } from "framer-motion";
 import { headerData } from "@/data/headerData";
 import HamburgerButton from "./accessories/mobileMenu/HamburgerButton";
 import { SectionProviderContext } from "@/providers/SectionProvider";
@@ -69,8 +69,8 @@ const Header: FC = () => {
       {isMobileHeader ? (
         <header className="mobile">
           <motion.div
-            initial={{ x: -100, opacity: 0, visibility: "hidden" }}
-            animate={{ x: 0, opacity: 1, visibility: "visible" }}
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
             transition={{
               type: "spring",
               duration: 0.5,
@@ -94,11 +94,12 @@ const Header: FC = () => {
       ) : (
         <header className="desktop">
           <motion.div
-            initial={{ y: -100, opacity: 0, visibility: "hidden" }}
-            animate={{ y: 0, opacity: 1, visibility: "visible" }}
+            initial={{ y: "-100px" }}
+            animate={{ y: 0 }}
             transition={{
               type: "spring",
-              duration: 1,
+              stiffness: 100,
+              duration: 0.5,
             }}
           >
             <nav>

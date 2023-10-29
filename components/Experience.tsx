@@ -3,7 +3,6 @@
 import { FC } from "react";
 import SectionHeading from "./accessories/SectionHeading";
 import { experienceData } from "@/data/experienceData";
-import "react-vertical-timeline-component/style.min.css";
 import { map } from "lodash";
 import Container from "./Container";
 import FadeUp from "@/motions/FadeUp";
