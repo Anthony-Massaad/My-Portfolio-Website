@@ -22,7 +22,7 @@
       width: fit-content;
       img {
         @extend .box-shadow-lg;
-        border: 0.35rem solid var(--bg-color);
+        border: 0.35rem solid var(--face-image-border);
         border-radius: 50%;
         height: 8.25rem;
         width: 8.25rem;

@@ -94,7 +94,7 @@ const Header: FC = () => {
       ) : (
         <header className="desktop">
           <motion.div
-            initial={{ y: "-100px" }}
+            initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{
               type: "spring",

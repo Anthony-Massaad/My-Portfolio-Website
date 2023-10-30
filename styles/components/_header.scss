@@ -67,7 +67,11 @@ header.mobile {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: var(--bg-color);
+    background: var(--hamburger-button-bg);
+
+    path {
+      stroke: var(--hamburger-button-stroke);
+    }
   }
 
   .background {
@@ -77,7 +81,7 @@ header.mobile {
     left: 0;
     bottom: 0;
     width: 180px;
-    background: var(--bg-color);
+    background: var(--hamburger-button-bg);
     height: 100%;
   }
 

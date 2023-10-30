@@ -1,0 +1,10 @@
+.theme-toggle-btn-container {
+  .theme-toggle-btn {
+    @extend .box-shadow-lg;
+    cursor: pointer;
+  }
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: transparent;
+}

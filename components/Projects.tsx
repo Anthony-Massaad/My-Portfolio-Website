@@ -48,7 +48,12 @@ const Projects: FC = () => {
                       <li key={index2}>{item}</li>
                     ))}
                   </ul>
-                  <Button to={project.github} newTab className="view-project">
+                  <Button
+                    to={project.github}
+                    newTab
+                    className="view-project"
+                    alternateColor
+                  >
                     <AiFillGithub /> View Project On Github!
                   </Button>
                 </div>
@@ -64,7 +69,12 @@ const Projects: FC = () => {
           ))}
         </div>
         <FadeUp>
-          <Button to={externalLinks.github} newTab className="more-projects">
+          <Button
+            to={externalLinks.github}
+            newTab
+            className="more-projects"
+            alternateColor
+          >
             <AiFillGithub /> Check out my github for more!
           </Button>
         </FadeUp>

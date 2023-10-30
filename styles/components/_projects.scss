@@ -25,7 +25,7 @@
   }
 
   .project {
-    background-color: #f3f4f6;
+    background-color: var(--project-bg-color);
     @extend .box-shadow-lg;
     position: relative;
     padding: 1rem;
