@@ -25,7 +25,7 @@ const ThemeToggleBtn: FC = () => {
       }}
       className="theme-toggle-btn-container"
     >
-      <Button noText to="" action={toggle} className="theme-toggle-btn">
+      <Button noText to="#" action={toggle} className="theme-toggle-btn">
         {theme === "light" ? <BsSun /> : <BsMoon />}
       </Button>
     </motion.div>

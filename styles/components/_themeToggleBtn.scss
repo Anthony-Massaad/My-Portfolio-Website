@@ -2,6 +2,7 @@
   .theme-toggle-btn {
     @extend .box-shadow-lg;
     cursor: pointer;
+    background-color: var(--toggle-theme-bg);
   }
   position: fixed;
   bottom: 1rem;
