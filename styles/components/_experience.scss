@@ -53,8 +53,7 @@
       @extend .d-flex;
       justify-content: center;
       align-items: center;
-      background: white;
-      border: 1px solid var(--txt-color);
+      background: var(--experience-content-bg);
       font-size: 1.5rem;
       position: absolute;
       top: 0;
@@ -65,9 +64,13 @@
       margin-left: -30px;
 
       svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.2rem;
+        height: 2.2rem;
         margin-top: 0.5rem;
+        path {
+          stroke: var(--txt-color);
+          stroke-width: 2px;
+        }
       }
 
       @include lg-breakpoint {
@@ -77,7 +80,7 @@
 
     .content {
       @extend .box-shadow-lg;
-      background: #f3f4f6;
+      background: var(--experience-content-bg);
       text-align: left;
       padding: 1.3rem 2rem;
       position: relative;

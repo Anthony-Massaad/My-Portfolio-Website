@@ -7,6 +7,7 @@
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
+    background-color: var(--education-bg-color);
 
     img {
       @extend .box-shadow-md;

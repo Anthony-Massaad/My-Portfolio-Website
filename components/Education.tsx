@@ -43,7 +43,12 @@ const Education: FC = () => {
           </div>
         </FadeUp>
         <FadeUp>
-          <Button to={externalLinks.grades} newTab className="grades-link">
+          <Button
+            to={externalLinks.grades}
+            newTab
+            className="grades-link"
+            alternateColor
+          >
             View Grades <AiOutlineArrowRight />
           </Button>
         </FadeUp>
