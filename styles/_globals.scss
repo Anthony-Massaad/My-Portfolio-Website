@@ -46,6 +46,7 @@ html.light {
   --contact-send-color: var(--bg-color);
   --hamburger-button-bg: var(--bg-color);
   --hamburger-button-stroke: hsl(0, 0%, 18%);
+  --toggle-theme-bg: var(--bg-color);
 }
 
 html.dark {
@@ -77,6 +78,7 @@ html.dark {
   --contact-send-color: var(--txt-color);
   --hamburger-button-bg: var(--lighter-bg-color);
   --hamburger-button-stroke: var(--txt-color);
+  --toggle-theme-bg: var(--lighter-bg-color);
 }
 
 body {
