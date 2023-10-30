@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} light`}>
+      <body className={`${inter.className} dark`}>
         <ScrollToTop>
           <SectionProvider>
             <ToastProvider>

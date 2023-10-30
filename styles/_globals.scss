@@ -22,8 +22,45 @@ html {
 body.light {
   --bg-color: rgb(249 250 251);
   --txt-color: rgb(3 7 18);
+  --header-bg-color: rgb(249 250 251);
   --header-link-unhover-color: rgb(107 114 128);
   --alternate-button-color: rgb(17, 24, 39);
+  --alternate-button-txt-color: var(--bg-color);
+  --introduction-bg-gradient: linear-gradient(
+    to bottom,
+    #cfeefcc3,
+    #cffcfa97,
+    #bbe6f265,
+    var(--bg-color)
+  );
+  --experience-content-bg: #f3f4f6;
+  --box-shadow-large: 0 3px 6px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+  --box-shadow-medium: 0 3px 4px rgba(0, 0, 0, 0.08),
+    0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+body.dark {
+  --bg-color: #212529;
+  --txt-color: rgb(249 250 251);
+  --header-bg-color: #343a40;
+  --header-link-unhover-color: rgb(205, 205, 205);
+  --alternate-button-color: #883cae;
+  --alternate-button-txt-color: var(--txt-color);
+
+  --experience-content-bg: #343a40;
+  --box-shadow-large: 0 3px 6px rgba(136, 60, 174, 0.08),
+    0 3px 6px rgba(136, 60, 174, 0.15);
+  --box-shadow-medium: 0 3px 4px rgba(136, 60, 174, 0.08),
+    0 3px 4px rgba(136, 60, 174, 0.15);
+
+  --introduction-bg-gradient: linear-gradient(
+    to bottom,
+    #9473a5,
+    #9e7baf9e,
+    #8e6aa057,
+    var(--bg-color)
+  );
 }
 
 body {

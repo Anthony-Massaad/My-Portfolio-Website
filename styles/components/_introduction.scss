@@ -3,13 +3,7 @@
   align-items: center;
   height: 100vh;
   min-height: 500px;
-  background: linear-gradient(
-    to bottom,
-    #cfeefcc3,
-    #cffcfa97,
-    #bbe6f265,
-    var(--bg-color)
-  );
+  background: var(--introduction-bg-gradient);
   .container {
     height: auto;
   }

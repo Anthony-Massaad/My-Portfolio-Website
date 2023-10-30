@@ -20,7 +20,7 @@
 
   &.alternate-color {
     background-color: var(--alternate-button-color) !important;
-    color: var(--bg-color);
+    color: var(--alternate-button-txt-color);
   }
 
   &.fully-rounded {
