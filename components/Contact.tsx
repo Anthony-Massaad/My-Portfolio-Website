@@ -12,6 +12,7 @@ import { ToastContext } from "@/providers/ToastProvider";
 import { isEmpty, trim } from "lodash";
 import { externalLinks } from "@/data/externalLinks";
 import useSectionInView from "@/hooks/useSectionInView";
+import TripleDotLoader from "./accessories/TripleDotLoader";
 
 const Contact: FC = () => {
   const { ref } = useSectionInView("Contact");
@@ -33,6 +34,7 @@ const Contact: FC = () => {
         title: "Oops!",
         description: "Please put some message",
       });
+      setSendingEmail(false);
       return;
     }
 
@@ -42,6 +44,7 @@ const Contact: FC = () => {
         title: "Oops!",
         description: "Please put some Subject",
       });
+      setSendingEmail(false);
       return;
     }
 
@@ -165,13 +168,17 @@ const Contact: FC = () => {
                   onChange={(e) => setMessageInput(e.target.value)}
                 />
               </div>
-              <button
-                type="submit"
-                className="submit-btn"
-                disabled={sendingEmail}
-              >
-                Send <AiOutlineSend />
-              </button>
+              {!sendingEmail ? (
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={sendingEmail}
+                >
+                  Send <AiOutlineSend />
+                </button>
+              ) : (
+                <TripleDotLoader />
+              )}
             </FadeUp>
           </form>
         </div>
