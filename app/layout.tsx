@@ -14,6 +14,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Anthony | Personal Portfolio",
   description: "Anthony Massaad is a Software Engineer",
+  authors: { name: "Anthony Massaad" },
+  creator: "Anthony Massaad",
+  keywords: [
+    "Anthony Massaad",
+    "Software Enggineer",
+    "Portfolio Website",
+    "Carleton Student",
+  ],
 };
 
 export default function RootLayout({
@@ -23,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} light`}>
+      <body className={`${inter.className}`}>
         <ScrollToTop>
           <ThemeProvider>
             <SectionProvider>

@@ -12,13 +12,7 @@ html {
   @include lg-breakpoint {
     font-size: $default_font_size - 2px;
   }
-}
 
-* {
-  z-index: 10;
-}
-
-html.light {
   --bg-color: rgb(249 250 251);
   --txt-color: rgb(3 7 18);
   --header-bg-color: rgb(249 250 251);
@@ -47,6 +41,10 @@ html.light {
   --hamburger-button-bg: var(--bg-color);
   --hamburger-button-stroke: hsl(0, 0%, 18%);
   --toggle-theme-bg: var(--bg-color);
+}
+
+* {
+  z-index: 10;
 }
 
 html.dark {
