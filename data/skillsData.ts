@@ -35,6 +35,7 @@ export const skillsData: SkillsInterface[] = [
       "Pycharm",
       "PhotoShop",
       "Git",
+      "Spring Boot",
     ],
   },
   {
@@ -46,6 +47,7 @@ export const skillsData: SkillsInterface[] = [
       "Data Modelling",
       "Software Design Patterns",
       "Data Architecture",
+      "Object Relational Mapping",
     ],
   },
 ];

@@ -8,6 +8,27 @@ interface ProjectInterface {
 
 export const projectsData: ProjectInterface[] = [
   {
+    name: "Opinion Owl",
+    language: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
+    imgUrl: "/opinionOwl.png",
+    content: [
+      `In a team environment, developed a Mini-Survey Monkey for users to create and fill surverys`,
+      `Utilized Spring Boot to create a front-end user experience that is seamless`,
+      `Used Object-Relational Mapping through Jakarta Persistence to simplify database interactions, enhances code maintainability, and ensures portability across various database systems.`,
+    ],
+    github: "https://github.com/Anthony-Massaad/OpinionOwl",
+  },
+  {
+    name: "Real-Time Elevator Simulator",
+    language: ["Java"],
+    imgUrl: "/elevatorProject.png",
+    content: [
+      `Simulated an elevator control system in real-time using Java threads following the state design pattern.`,
+      `Utilized UDP to connect the components through the network either via the same machine or across machines.`,
+    ],
+    github: "https://github.com/Anthony-Massaad/Elevator-Simulator",
+  },
+  {
     name: "Tetris",
     language: ["Python"],
     imgUrl: "/Tetris.png",
@@ -50,17 +71,6 @@ export const projectsData: ProjectInterface[] = [
       `Carefully commented the code for better understanding.`,
     ],
     github: "https://github.com/Anthony-Massaad/Real-Time-Chat",
-  },
-  {
-    name: "Virtual Shop",
-    language: ["Java"],
-    imgUrl: "/VirtualShop.png",
-    content: [
-      `Team coolaborative project that puts the use of Object Orientated proamming and simulated the behaviour of an online store using Java.`,
-      `Developed an interactive graphical user interface using swing and a command based user interface which can handle multiple customer carts at a time.`,
-      `Carefully documented code for better understanding, and implementation of UML diagrams to display the full process of the software development.`,
-    ],
-    github: "https://github.com/Anthony-Massaad/Store_Interface_java",
   },
   {
     name: "Monopoly",

@@ -8,9 +8,7 @@ const Footer: FC = () => {
   return (
     <footer>
       <Container>
-        <FadeUp>
-          <p>&copy; 2023 Anthony Massaad. All rights reserved.</p>
-        </FadeUp>
+        <p>&copy; 2023 Anthony Massaad. All rights reserved.</p>
       </Container>
     </footer>
   );
