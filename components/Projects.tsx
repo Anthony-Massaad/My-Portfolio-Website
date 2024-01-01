@@ -60,9 +60,9 @@ const Projects: FC = () => {
                 <Image
                   src={project.imgUrl}
                   alt="project image"
-                  width="192"
+                  width="300"
                   quality={100}
-                  height="192"
+                  height="300"
                 />
               </div>
             </FadeUp>
