@@ -20,6 +20,7 @@ export const skillsData: SkillsInterface[] = [
       "React",
       "XML",
       "Makefile",
+      "React-Native",
     ],
   },
   {
@@ -36,6 +37,7 @@ export const skillsData: SkillsInterface[] = [
       "PhotoShop",
       "Git",
       "Spring Boot",
+      "Expo",
     ],
   },
   {
@@ -48,6 +50,7 @@ export const skillsData: SkillsInterface[] = [
       "Software Design Patterns",
       "Data Architecture",
       "Object Relational Mapping",
+      "Machine Learning",
     ],
   },
 ];
