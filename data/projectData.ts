@@ -8,6 +8,23 @@ interface ProjectInterface {
 
 export const projectsData: ProjectInterface[] = [
   {
+    name: "Audio Genre Classifier",
+    language: [
+      "Python",
+      "Machine Learning",
+      "Transfer Learning",
+      "Deep Learning",
+    ],
+    imgUrl: "/GenreClassifier.png",
+    content: [
+      `Developed a machine learning model using a combination of Convolutional Neural Network and a Support Machine Vector to classify audio files to their Genres`,
+      `Used Transfer Learning through a pretrained model tuned to work with the problem at hand`,
+      `Used tuning techniques like Grid Search to optimize both models for better performance`,
+    ],
+    github:
+      "https://github.com/Anthony-Massaad/Machine-Learning-AudioRecognizer",
+  },
+  {
     name: "Opinion Owl",
     language: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript"],
     imgUrl: "/opinionOwl.png",
