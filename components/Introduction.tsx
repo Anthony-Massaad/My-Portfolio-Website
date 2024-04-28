@@ -31,7 +31,7 @@ const Introduction: FC = () => {
               }}
             >
               <Image
-                src="/me.jpg"
+                src="/me.png"
                 alt="Anthony Image"
                 width="192"
                 height="192"
