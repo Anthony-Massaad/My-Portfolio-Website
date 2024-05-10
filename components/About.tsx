@@ -19,13 +19,11 @@ const About: FC = () => {
             <SectionHeading>About me</SectionHeading>
             <div>
               <p>
-                I am a <span className="bold">fourth-year</span> student
-                pursuing a{" "}
-                <span className="bold">degree in Software Engineering</span> at
-                Carleton University. I enjoy collaborating with fellow motivated
-                individuals and utilizing software development as a means to
-                tackle real world problems, ultimately delivering valuable
-                solutions. I am{" "}
+                I am a <span className="bold">software engineering</span>{" "}
+                <span className="bold">graduate</span> at Carleton University. I
+                enjoy collaborating with fellow motivated individuals and
+                utilizing software development as a means to tackle real world
+                problems, ultimately delivering valuable solutions. I am{" "}
                 <span className="bold">
                   proficient in various languages, such as web development
                   technologies, Python, Java, and C.
@@ -46,9 +44,7 @@ const About: FC = () => {
                 >
                   Github
                 </Link>{" "}
-                profile. I am eagerly looking forward to{" "}
-                <span className="bold">graduation in April 2024</span> and am
-                actively{" "}
+                profile. I am actively{" "}
                 <span className="bold">
                   seeking full-time software developer
                 </span>{" "}

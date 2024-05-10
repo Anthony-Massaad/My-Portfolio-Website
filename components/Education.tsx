@@ -31,12 +31,12 @@ const Education: FC = () => {
             />
             <div className="summary">
               <h3>Carleton University</h3>
-              <p className="date">Sept 2019 - Present</p>
+              <p className="date">Sept 2019 - April 2024</p>
               <h4>Bachelor of Software Engineering with Co-op</h4>
             </div>
             <div className="info">
               <ul>
-                <li>GPA: 10.32/12 (A-), completed all Co-op terms</li>
+                <li>GPA: 10.25/12 (A-), completed all Co-op terms</li>
                 <li>Dean's Honour List with entrance Scholarship of $2000</li>
               </ul>
             </div>
