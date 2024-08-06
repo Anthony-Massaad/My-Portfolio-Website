@@ -13,7 +13,7 @@ import { SectionHref, SectionName } from "@/types/types";
 
 const sidebarVarients: Variants = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 36px 35px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -21,7 +21,7 @@ const sidebarVarients: Variants = {
     },
   }),
   closed: {
-    clipPath: "circle(20px at 40px 40px)",
+    clipPath: "circle(20px at 36px 35px)",
     transition: {
       delay: 0.5,
       type: "spring",

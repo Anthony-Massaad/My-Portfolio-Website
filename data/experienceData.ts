@@ -14,49 +14,41 @@ export const experienceData: ExperienceDataInterface[] = [
   {
     name: "Irdeto",
     role: "Software Developer",
-    date: "Apr 2022 - Sept 2023",
+    date: "Sept 2022 - Sept 2023",
     icon: createElement(GrLocation),
     content: [
-      `Worked with the Irdeto Reference Cloud App (IRCA) team in developing a web application using NextJs and TypeScript.`,
-      `Worked with Amazon Web Service (AWS), Microsoft Azure and Auth0 authentication.`,
-      `Implemented many web pages including an internationalization page to help with creating unique translations for the content of the website, with the base language being English. This solution was then used in many other web applications at Irdeto. `,
-      `Also contributed to creating a Irdeto website component library using TypeScript to have pre-defined web components and functionalities that will assist in speeding up web development at Irdeto.`,
+      `Collaborated with the Irdeto Reference Cloud App (IRCA) team in developing a web application using Next.js and TypeScript.`,
+      `Worked with Amazon Web Service (AWS) to host the website, Microsoft Azure to host the database and Auth0 for authentication,
+ensuring 99.9% uptime and robust security for user data.`,
+      `Implemented multiple web pages with internationalization features, adapting to users’ preferred languages and improving the user
+experience.`,
+      `Played a pivotal role in creating a TypeScript-based internal component library, providing pre-defined web components and
+functionalities. This reduced development time by 25% and standardized the codebase across all web projects.`,
+      `Spearheaded in the development of a slack bot during corporal hackathon to help maintain and track merge requests from GitLab,
+enhancing team collaboration and reducing merge request resolution time.`,
+      `Optimized the logger implementation using python in one of Irdeto’s software components, making logs more efficient and effective.
+This streamlined the debugging process and reduced bug resolution.`,
+      `Provided virtual and manual assistance in maintaining the test framework and machines, reducing test-related downtime by 50%.`,
     ],
   },
   {
     name: "Elections Canada",
     role: "Website Designer & Developer ",
-    date: "Sept 2022 - Jan 2023",
+    date: "Jan 2022 - Oct 2023",
     icon: createElement(GrLocation),
     content: [
-      `Worked on a new website branch, Digital Enterprise Transformation Branch (DETB) using HTML, CSS, and JavaScript.`,
-      `Have weekly meetings with key stakeholders to discuss their requirements to design and develop their webpages.`,
-      `Created a script file for animating components on web pages using JavaScript. `,
-    ],
-  },
-  {
-    name: "Irdeto",
-    role: "Software Developer",
-    date: "Sept 2022 - Jan 2023",
-    icon: createElement(GrLocation),
-    content: [
-      `Provided manual assistance in maintaining the test framework and machines.`,
-      `Improved the logger implementation using python in one of Irdeto’s software components, which enhance the logs more efficiently and effectively. This allows debugging to be much easier.`,
-      `Aided in one of the major product releases to a client, which resulted in developing in C and in Makefile to support a dialect.`,
-      `In a team collaboration during corporal hackathon, we developed a slack bot using python to help track Merge Requests (MR) from GitLab. This is done by sending a daily list of pending MRs, as well as post into a specified channel of MRs sent. This helps keep organization and ensure everything is reviewed.`,
-    ],
-  },
-  {
-    name: "Elections Canada",
-    role: "Website Designer and Developer",
-    date: "Jan 2022 - Aug 2022",
-    icon: createElement(GrLocation),
-    content: [
-      `Using web programming languages (HTML, CSS, JavaScript, and JavaScript libraries), I develop webpages for the Digital Transformation Branch. This includes web pages for the change management team, project management team, Data Management Centre of Expertise…etc.`,
-      `Have weekly meetings with key stakeholders to discuss their requirements to design and develop their webpages.`,
-      `Developed a search algorithm for the Digital Transformation Branch to locate content much easier.`,
-      `Create a custom style sheet and JavaScript file for the Digital Transformation Branch, which allows any developer to easily create custom components and animations.`,
-      `Using PowerApps, I developed a form to automate our team’s weekly updates. This form has reduced the volume of emails and eliminated the need to manually gather the team’s information. developing new skills, as well as showing and enhance my current skills either.`,
+      `Led the development of webpages within the Digital Transformation Branch, and utilized HTML, CSS, JavaScript, and JavaScript
+libraries to create webpages for various teams within the branch.`,
+      `Engaged in weekly meetings with key stakeholders to gather requirements, design, and develop their webpages, ensuring alignment
+with business needs and enhancing stakeholder satisfaction`,
+      `Developed a search algorithm for the Digital Transformation Branch, significantly improving content discoverability and reducing
+search time.`,
+      `Created a custom style sheet and JavaScript file for the Digital Transformation Branch, enabling developers to easily create custom
+components and animations.`,
+      `Spearheaded the development of the Digital Enterprise Transformation Branch using HTML, CSS, and JavaScript, resulting in a
+modern, user-friendly interface.`,
+      `Developed a script file for animating components on web pages using JavaScript, enhancing user interaction and aiding in improved
+user experience.`,
     ],
   },
 ];

@@ -11,7 +11,7 @@ import ScaleUp from "@/motions/ScaleUp";
 import useSectionInView from "@/hooks/useSectionInView";
 
 const Experience: FC = () => {
-  const { ref } = useSectionInView("Experience", 0.3);
+  const { ref } = useSectionInView("Experience", 0.4);
 
   return (
     <section className="experience-container" id="experience" ref={ref}>

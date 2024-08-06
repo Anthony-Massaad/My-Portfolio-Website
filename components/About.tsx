@@ -19,36 +19,35 @@ const About: FC = () => {
             <SectionHeading>About me</SectionHeading>
             <div>
               <p>
-                I am a <span className="bold">software engineering</span>{" "}
-                <span className="bold">graduate</span> at Carleton University. I
-                enjoy collaborating with fellow motivated individuals and
-                utilizing software development as a means to tackle real world
-                problems, ultimately delivering valuable solutions. I am{" "}
+                I am a{" "}
                 <span className="bold">
-                  proficient in various languages, such as web development
-                  technologies, Python, Java, and C.
+                  software engineer with 2 years of experience
+                </span>{" "}
+                and <span className="bold">Carleton University graduate</span>{" "}
+                with a passion for collaboration and problem-solving through
+                software development. My{" "}
+                <span className="bold">
+                  proficiency spans in various languages, such as web
+                  development technologies, Python, Java, and C.
                 </span>
               </p>
               <br />
               <p>
-                I am{" "}
-                <span className="bold">committed to continuous learning</span>,{" "}
-                <span className="bold">and</span> constantly seeking ways in{" "}
-                <span className="bold">enhancing my skill set</span>. If you'd
-                like to explore some of the projects I've worked on, feel free
-                to check out my{" "}
+                Dedicated to continuous learning, I am always seeking
+                opportunities to enhance my skills. If you'd like to explore
+                some of the projects I've worked on, feel free to check out my{" "}
                 <Link
                   href={externalLinks.github}
                   className="bold"
                   target="_blank"
                 >
-                  Github
-                </Link>{" "}
-                profile. I am actively{" "}
+                  Github profile
+                </Link>
+                . I am actively{" "}
                 <span className="bold">
                   seeking full-time software developer
                 </span>{" "}
-                positions to embark on the next phase of my career.
+                positions to further advance my career.
               </p>
             </div>
           </div>
