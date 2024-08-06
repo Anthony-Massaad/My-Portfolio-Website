@@ -21,21 +21,45 @@ const About: FC = () => {
               <p>
                 I am a{" "}
                 <span className="bold">
-                  software engineer with 2 years of experience
+                  software engineer with over 2 years of experience
                 </span>{" "}
-                and <span className="bold">Carleton University graduate</span>{" "}
-                with a passion for collaboration and problem-solving through
-                software development. My{" "}
+                and a <span className="bold">Carleton University graduate</span>
+                . My passion lies in{" "}
                 <span className="bold">
-                  proficiency spans in various languages, such as web
-                  development technologies, Python, Java, and C.
+                  collaboration and problem-solving through software development
                 </span>
+                . I have honed my skills across{" "}
+                <span className="bold">
+                  various programming languages and technologies
+                </span>
+                , with a strong emphasis on{" "}
+                <span className="bold">
+                  web development, Python, Java, and C
+                </span>
+                .
               </p>
               <br />
               <p>
-                Dedicated to continuous learning, I am always seeking
-                opportunities to enhance my skills. If you'd like to explore
-                some of the projects I've worked on, feel free to check out my{" "}
+                I am dedicated to{" "}
+                <span className="bold">continuous learning</span> and am always
+                seeking opportunities to{" "}
+                <span className="bold">
+                  enhance my skills while staying updated with the latest
+                  technology
+                </span>
+                . As a software engineer, I thrive for{" "}
+                <span className="bold">
+                  quality, efficiency, and innovation
+                </span>
+                . I also thrive in{" "}
+                <span className="bold">collaborative environments</span> where I
+                can{" "}
+                <span className="bold">
+                  contribute to and learn from a team
+                </span>
+                , driving projects to successful completion. If you'd like to
+                explore some of the projects I've worked on, feel free to check
+                out my{" "}
                 <Link
                   href={externalLinks.github}
                   className="bold"

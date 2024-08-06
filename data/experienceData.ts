@@ -12,7 +12,7 @@ export interface ExperienceDataInterface {
 
 export const experienceData: ExperienceDataInterface[] = [
   {
-    name: "Irdeto",
+    name: "Irdeto (8mos)",
     role: "Software Developer",
     date: "Sept 2022 - Sept 2023",
     icon: createElement(GrLocation),
@@ -32,7 +32,7 @@ This streamlined the debugging process and reduced bug resolution.`,
     ],
   },
   {
-    name: "Elections Canada",
+    name: "Elections Canada (1yr & 8mos)",
     role: "Website Designer & Developer ",
     date: "Jan 2022 - Oct 2023",
     icon: createElement(GrLocation),
