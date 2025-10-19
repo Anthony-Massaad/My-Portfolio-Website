@@ -12,6 +12,18 @@ export interface ExperienceDataInterface {
 
 export const experienceData: ExperienceDataInterface[] = [
   {
+    name: "Ericsson (Present)",
+    role: "Network Automation and Test/Software Developer",
+    date: "Nov 2024 - Present",
+    icon: createElement(GrLocation),
+    content: [
+      `Provided lab support through Jira, diagnosing and resolving customer-reported incidents related to network, device configurations, test environments, and overall ensured timely closure of tickets to reduce downtime.`,
+      `Collaborated with the automation team to design and implement a verification pipeline for code commits and merges, integrating linting, security scans, automated testing, and documentation validation to ensure consistent code quality and deployment integrity.`,
+      `Collaborated with other teams to plan and execute lab migrations on demand, including hardware relocation, reconfiguration of network topologies, and validation of the system integrity post-migration.`,
+      `Enhanced and maintained internal monitoring tools for access servers through Python, Ansible and Jenkins to improve system reliability and observability.`,
+    ],
+  },
+  {
     name: "Irdeto (8mos)",
     role: "Software Developer",
     date: "Sept 2022 - Sept 2023",

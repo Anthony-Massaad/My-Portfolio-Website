@@ -21,6 +21,9 @@ export const skillsData: SkillsInterface[] = [
       "XML",
       "Makefile",
       "React-Native",
+      "Ansible",
+      "Groovy",
+      "Shell"
     ],
   },
   {
@@ -38,6 +41,7 @@ export const skillsData: SkillsInterface[] = [
       "Git",
       "Spring Boot",
       "Expo",
+      "Jenkins"
     ],
   },
   {
