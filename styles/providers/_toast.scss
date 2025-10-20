@@ -1,3 +1,5 @@
+@use "../inits/variables";
+
 @keyframes toast-in-right {
   from {
     transform: translateX(100%);
@@ -116,9 +118,9 @@
   top: 12px;
   right: 12px;
   transition: transform 0.6s ease-in-out;
-  -moz-transition: color $default_transition_time ease;
-  -o-transition: color $default_transition_time ease;
-  -webkit-transition: color $default_transition_time ease;
+  -moz-transition: color variables.$default_transition_time ease;
+  -o-transition: color variables.$default_transition_time ease;
+  -webkit-transition: color variables.$default_transition_time ease;
 }
 .add-toast {
   animation: toast-in-right 0.7s;

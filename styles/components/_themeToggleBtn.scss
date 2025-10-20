@@ -1,3 +1,5 @@
+@use "../inits/reusableClasses";
+
 .theme-toggle-btn-container {
   .theme-toggle-btn {
     @extend .box-shadow-lg;

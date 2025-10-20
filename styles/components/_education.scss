@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .education-container {
   .education {
     @extend .box-shadow-lg;
@@ -16,7 +19,7 @@
       left: 0.5rem;
       top: 0.5rem;
 
-      @include sm-breakpoint {
+      @include variables.sm-breakpoint {
         display: none;
       }
     }
@@ -25,12 +28,12 @@
       margin-left: 6.5rem;
       margin-bottom: 2rem;
 
-      @include lg-breakpoint {
+      @include variables.lg-breakpoint {
         margin-left: 7.5rem;
         margin-bottom: 3rem;
       }
 
-      @include sm-breakpoint {
+      @include variables.sm-breakpoint {
         margin-left: 0;
         margin-bottom: 1rem;
       }

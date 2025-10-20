@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .btn {
   @extend .d-flex;
   @extend .box-shadow-md;
@@ -14,7 +17,7 @@
   background-color: var(--bg-color);
   color: var(--txt-color);
 
-  @include sm-breakpoint {
+  @include variables.sm-breakpoint {
     font-size: 0.9rem;
   }
 

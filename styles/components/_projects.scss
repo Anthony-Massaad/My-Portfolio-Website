@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .projects-container {
   .intro {
     text-align: center;
@@ -18,7 +21,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 
-    @include sm-breakpoint {
+    @include variables.sm-breakpoint {
       font-size: 1rem;
       letter-spacing: 0;
     }
@@ -35,7 +38,7 @@
     .content {
       margin-right: 21rem;
 
-      @include md-lg-breakpoint {
+      @include variables.md-lg-breakpoint {
         margin-right: 0;
       }
       .title {
@@ -89,7 +92,7 @@
       top: 1.5rem;
       right: -5rem;
 
-      @include md-lg-breakpoint {
+      @include variables.md-lg-breakpoint {
         display: none;
       }
     }

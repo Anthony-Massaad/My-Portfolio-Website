@@ -1,9 +1,12 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .about-container {
   .about {
     @extend .d-flex;
     align-items: center;
 
-    @include md-breakpoint {
+    @include variables.md-breakpoint {
       flex-direction: column;
     }
     h2 {
@@ -13,7 +16,7 @@
       line-height: 2;
       margin-left: 5rem;
 
-      @include md-breakpoint {
+      @include variables.md-breakpoint {
         margin-left: 0;
         text-align: center;
       }

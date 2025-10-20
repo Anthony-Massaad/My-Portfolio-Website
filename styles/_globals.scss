@@ -1,16 +1,17 @@
-@import "./inits/reset";
-@import "./inits/variables";
-@import "./inits/fonts";
+@use "sass:meta";
+@use "inits/reset";
+@use "inits/variables";
+@use "inits/fonts";
 
 html {
-  font-size: $default_font_size;
+  font-size: variables.$default_font_size;
 
-  @include md-breakpoint {
-    font-size: $default_font_size - 4px;
+  @include variables.md-breakpoint {
+    font-size: variables.$default_font_size - 4px;
   }
 
-  @include lg-breakpoint {
-    font-size: $default_font_size - 2px;
+  @include variables.lg-breakpoint {
+    font-size: variables.$default_font_size - 2px;
   }
 
   --bg-color: rgb(249 250 251);
@@ -99,19 +100,19 @@ main {
   overflow: hidden;
 }
 
-@import "./components/tripleDotLoader";
-@import "./inits/reusableClasses";
-@import "./providers/toast";
-@import "./components/container";
-@import "./components/themeToggleBtn";
-@import "./components/button";
-@import "./components/sectionHeading";
-@import "./components/header";
-@import "./components/introduction";
-@import "./components/about";
-@import "./components/experience";
-@import "./components/skills";
-@import "./components/projects";
-@import "./components/education";
-@import "./components/contact";
-@import "./components/footer";
+@include meta.load-css("components/tripleDotLoader");
+@include meta.load-css("inits/reusableClasses");
+@include meta.load-css("providers/toast");
+@include meta.load-css("components/container");
+@include meta.load-css("components/themeToggleBtn");
+@include meta.load-css("components/button");
+@include meta.load-css("components/sectionHeading");
+@include meta.load-css("components/header");
+@include meta.load-css("components/introduction");
+@include meta.load-css("components/about");
+@include meta.load-css("components/experience");
+@include meta.load-css("components/skills");
+@include meta.load-css("components/projects");
+@include meta.load-css("components/education");
+@include meta.load-css("components/contact");
+@include meta.load-css("components/footer");

@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 header.desktop {
   z-index: 9998;
   position: fixed;
@@ -18,10 +21,10 @@ header.desktop {
 
       li {
         a {
-          transition: color $default_transition_time ease;
-          -moz-transition: color $default_transition_time ease;
-          -o-transition: color $default_transition_time ease;
-          -webkit-transition: color $default_transition_time ease;
+          transition: color variables.$default_transition_time ease;
+          -moz-transition: color variables.$default_transition_time ease;
+          -o-transition: color variables.$default_transition_time ease;
+          -webkit-transition: color variables.$default_transition_time ease;
           display: block;
           padding: 0.5rem;
           color: inherit;
@@ -92,7 +95,7 @@ header.mobile {
     li {
       margin-bottom: 0.5rem;
       a {
-        transition: color $default_transition_time ease;
+        transition: color variables.$default_transition_time ease;
         display: block;
         width: 100%;
         padding: 0.5rem;

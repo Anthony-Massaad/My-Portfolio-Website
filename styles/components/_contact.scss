@@ -1,15 +1,18 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .contact-container {
   .contact {
     @extend .d-flex;
     gap: 1rem;
     padding: 2rem;
 
-    @include lg-breakpoint {
+    @include variables.lg-breakpoint {
       flex-direction: column;
     }
 
     .info {
-      @include lg-breakpoint {
+      @include variables.lg-breakpoint {
         text-align: center;
       }
       a {
@@ -28,7 +31,7 @@
       .socials {
         .links {
           @extend .d-flex;
-          @include lg-breakpoint {
+          @include variables.lg-breakpoint {
             justify-content: center;
           }
           a {

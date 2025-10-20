@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .introduction-container {
   @extend .d-flex;
   align-items: center;
@@ -43,7 +46,7 @@
       padding: 0 1rem;
       margin: 1rem 0;
       text-align: center;
-      @include sm-breakpoint {
+      @include variables.sm-breakpoint {
         font-size: 1.5rem;
       }
     }
@@ -51,14 +54,14 @@
     .reach-me {
       @extend .d-flex;
 
-      @include sm-breakpoint {
+      @include variables.sm-breakpoint {
         flex-direction: column;
         row-gap: 1rem;
       }
 
       div {
         @extend .d-flex;
-        @include sm-breakpoint {
+        @include variables.sm-breakpoint {
           justify-content: center;
         }
       }

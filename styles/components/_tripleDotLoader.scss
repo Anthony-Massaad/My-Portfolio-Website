@@ -1,3 +1,5 @@
+@use "../inits/reusableClasses";
+
 .triple-dot-loader-container {
   @extend .d-flex;
   justify-content: space-around;

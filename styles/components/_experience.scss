@@ -1,3 +1,6 @@
+@use "../inits/variables";
+@use "../inits/reusableClasses";
+
 .experiences {
   padding: 2rem 0;
   position: relative;
@@ -13,7 +16,7 @@
     margin-left: -2px;
     opacity: 0.5;
 
-    @include lg-breakpoint {
+    @include variables.lg-breakpoint {
       left: 18px;
     }
 
@@ -73,7 +76,7 @@
         }
       }
 
-      @include lg-breakpoint {
+      @include variables.lg-breakpoint {
         left: 18px;
       }
     }
@@ -87,7 +90,7 @@
       border-radius: 0.25rem;
       width: 45%;
 
-      @include lg-breakpoint {
+      @include variables.lg-breakpoint {
         width: auto;
         margin-left: 4rem;
         &:not(.alternate) {
@@ -110,7 +113,7 @@
       &.alternate {
         left: 55%;
 
-        @include lg-breakpoint {
+        @include variables.lg-breakpoint {
           left: 0;
         }
 
@@ -165,7 +168,7 @@
         opacity: 0.7;
         display: inline-block;
 
-        @include lg-breakpoint {
+        @include variables.lg-breakpoint {
           position: relative;
           left: auto;
           top: auto;
