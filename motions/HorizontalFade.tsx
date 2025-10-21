@@ -1,7 +1,9 @@
-import { motion, useAnimation, useInView, Variants } from "framer-motion";
-import { FC, ReactNode, useEffect, useMemo, useRef } from "react";
+import type { Variants } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import type { FC, ReactNode} from "react";
+import { useEffect, useMemo, useRef } from "react";
 
-interface Props {
+type Props = {
   children: ReactNode;
   delay?: number;
   direction: "fade-left" | "fade-right";

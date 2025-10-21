@@ -1,4 +1,4 @@
-interface SkillsInterface {
+type SkillsInterface = {
   title: string;
   items: string[];
 }

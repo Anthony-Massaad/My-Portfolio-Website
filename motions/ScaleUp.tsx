@@ -1,7 +1,8 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import { FC, ReactNode, useEffect, useRef } from "react";
+import type { FC, ReactNode} from "react";
+import { useEffect, useRef } from "react";
 
-interface Props {
+type Props = {
   children: ReactNode;
   delay?: number;
 }

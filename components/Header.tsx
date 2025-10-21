@@ -1,15 +1,17 @@
 "use client";
 
-import { FC, useContext, useEffect, useRef, useState } from "react";
+import type { FC} from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { map } from "lodash";
 import Link from "next/link";
-import { Variants, motion } from "framer-motion";
+import type { Variants} from "framer-motion";
+import { motion } from "framer-motion";
 import { headerData } from "@/data/headerData";
 import HamburgerButton from "./accessories/mobileMenu/HamburgerButton";
 import { SectionProviderContext } from "@/providers/SectionProvider";
 import Navigation from "./accessories/mobileMenu/Navigation";
 import { scrollToSection } from "@/utils/utilities";
-import { SectionHref, SectionName } from "@/types/types";
+import type { SectionHref, SectionName } from "@/types/types";
 
 const sidebarVarients: Variants = {
   open: (height = 1000) => ({
@@ -117,11 +119,9 @@ const Header: FC = () => {
                   >
                     <Link
                       href={link.hash}
-                      className={`${
-                        activeSection === link.name ? "active" : ""
-                      }`}
+                      className={activeSection === link.name ? "active" : ""}
                       onClick={(e: any): void =>
-                        linkClick(e, link.hash, link.name)
+                        { linkClick(e, link.hash, link.name); }
                       }
                     >
                       {link.name}

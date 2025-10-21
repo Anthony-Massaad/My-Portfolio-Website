@@ -1,6 +1,7 @@
 "use client";
 
-import { FC, useContext, useState } from "react";
+import type { FC } from "react";
+import { useContext, useState } from "react";
 import SectionHeading from "./accessories/SectionHeading";
 import Container from "./Container";
 import FadeUp from "@/motions/FadeUp";
@@ -142,7 +143,9 @@ const Contact: FC = () => {
                     required
                     placeholder="anthony@google.com"
                     value={emailInput}
-                    onChange={(e) => setEmailInput(e.target.value)}
+                    onChange={(e) => {
+                      setEmailInput(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -155,7 +158,9 @@ const Contact: FC = () => {
                   required
                   placeholder="Hello!"
                   value={subjectInput}
-                  onChange={(e) => setSubjectInput(e.target.value)}
+                  onChange={(e) => {
+                    setSubjectInput(e.target.value);
+                  }}
                 />
               </div>
               <div className="msg-layer">
@@ -165,7 +170,9 @@ const Contact: FC = () => {
                   id="message"
                   placeholder="I thought your website was awesome!"
                   value={messageInput}
-                  onChange={(e) => setMessageInput(e.target.value)}
+                  onChange={(e) => {
+                    setMessageInput(e.target.value);
+                  }}
                 />
               </div>
               {!sendingEmail ? (

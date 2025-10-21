@@ -1,13 +1,14 @@
 "use client";
 
-import { SectionName } from "@/types/types";
-import React, {
-  useState,
-  createContext,
+import type { SectionName } from "@/types/types";
+import type {
   FC,
   ReactNode,
   Dispatch,
-  SetStateAction,
+  SetStateAction} from "react";
+import React, {
+  useState,
+  createContext
 } from "react";
 
 type Props = {

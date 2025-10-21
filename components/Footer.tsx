@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import type { FC } from "react";
 import Container from "./Container";
 import FadeUp from "@/motions/FadeUp";
 

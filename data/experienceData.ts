@@ -1,8 +1,9 @@
-import { ReactElement, createElement } from "react";
-import { IconBaseProps } from "react-icons";
+import type { ReactElement} from "react";
+import { createElement } from "react";
+import type { IconBaseProps } from "react-icons";
 import { GrLocation } from "react-icons/gr";
 
-export interface ExperienceDataInterface {
+export type ExperienceDataInterface = {
   name: string;
   role: string;
   date: string;

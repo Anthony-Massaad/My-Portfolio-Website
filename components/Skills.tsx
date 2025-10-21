@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import type { FC } from "react";
 import SectionHeading from "./accessories/SectionHeading";
 import FadeUp from "@/motions/FadeUp";
 import { map } from "lodash";

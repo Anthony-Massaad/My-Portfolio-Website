@@ -1,9 +1,10 @@
 "use client";
 
-import { CSSProperties, FC, ReactNode, useEffect, useRef } from "react";
+import type { CSSProperties, FC, ReactNode} from "react";
+import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-interface Props {
+type Props = {
   children: ReactNode;
   delay?: number;
   style?: CSSProperties;

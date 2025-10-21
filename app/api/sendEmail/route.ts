@@ -5,6 +5,15 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.TO_EMAIL;
 
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function POST(req: any): Promise<any> {
   const { email, subject, message } = await req.json();
   try {
@@ -12,11 +21,13 @@ export async function POST(req: any): Promise<any> {
       from: "Contact Form <onboarding@resend.dev>",
       to: toEmail as string,
       reply_to: email,
-      subject: subject,
+      subject,
       html: `
-      <p>${message}</p>
-      <br />
-      <p>From email <a href="mailto${email}">${email}</a></p>
+        <p>${escapeHtml(message)}</p>
+        <br />
+        <p>From email: <a href="mailto:${escapeHtml(email)}">${escapeHtml(
+        email
+      )}</a></p>
       `,
     });
     return NextResponse.json(data);

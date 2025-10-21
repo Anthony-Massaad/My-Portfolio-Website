@@ -1,29 +1,22 @@
 "use client";
 
 import { uniqueId } from "lodash";
-import {
-  FC,
-  FunctionComponentElement,
-  ReactNode,
-  createContext,
-  createElement,
-  useEffect,
-  useState,
-} from "react";
-import { IconBaseProps } from "react-icons";
+import type { FC, ReactElement, ReactNode } from "react";
+import { createContext, createElement, useEffect, useState } from "react";
+import type { IconBaseProps } from "react-icons";
 import { BiErrorCircle, BiCheckCircle } from "react-icons/bi";
 
-interface ToastStructure {
+type ToastStructure = {
   backgroundColor: string;
   id: string;
   title: string;
   description: string;
   remove: boolean;
   added: boolean;
-  icon: FunctionComponentElement<IconBaseProps>;
-}
+  icon: ReactElement<IconBaseProps, React.FunctionComponent<IconBaseProps>>;
+};
 
-interface ContextInterface {
+type ContextInterface = {
   setToast: ({
     severity,
     title,
@@ -33,15 +26,15 @@ interface ContextInterface {
     title: string;
     description: string;
   }) => void;
-}
+};
 
 export const ToastContext = createContext<ContextInterface>(
   {} as ContextInterface
 );
 
-interface Props {
+type Props = {
   children: ReactNode;
-}
+};
 
 const ToastProvider: FC<Props> = ({ children }) => {
   const [toastLst, setToastLst] = useState<ToastStructure[]>([]);
@@ -52,11 +45,13 @@ const ToastProvider: FC<Props> = ({ children }) => {
         applyRemoveAnimation(toastLst[0].id);
       }
     }, 3000);
-    return () => clearInterval(deleteInterval);
+    return () => {
+      clearInterval(deleteInterval);
+    };
   }, [toastLst]);
 
   const severitySettings = (severity: "success" | "error") => {
-    var toastProperties = {};
+    let toastProperties = {};
     switch (severity.toLowerCase()) {
       case "success":
         toastProperties = {
@@ -79,7 +74,7 @@ const ToastProvider: FC<Props> = ({ children }) => {
   };
 
   const applyRemoveAnimation = (id: string) => {
-    const toastToEdit = toastLst.find((toast, idx) => {
+    const toastToEdit = toastLst.find((toast) => {
       return toast.id === id;
     });
 
@@ -88,14 +83,14 @@ const ToastProvider: FC<Props> = ({ children }) => {
     toastToEdit.remove = true;
 
     setToastLst((prevToastLst) =>
-      prevToastLst.map((toast, idx) => {
+      prevToastLst.map((toast) => {
         return toast.id === toastToEdit.id ? toastToEdit : toast;
       })
     );
   };
 
   const deleteToast = (id: string) => {
-    setToastLst((currLst) => currLst.filter((toast, idx) => toast.id !== id));
+    setToastLst((currLst) => currLst.filter((toast) => toast.id !== id));
   };
 
   const setToast = ({
@@ -129,7 +124,7 @@ const ToastProvider: FC<Props> = ({ children }) => {
       deleteToast(id);
     }
     if (isAdded) {
-      const toastToEdit = toastLst.find((toast, idx) => {
+      const toastToEdit = toastLst.find((toast) => {
         return toast.id === id;
       });
       if (!toastToEdit) return;
@@ -137,7 +132,7 @@ const ToastProvider: FC<Props> = ({ children }) => {
       toastToEdit.added = false;
 
       setToastLst((prevToastLst) =>
-        prevToastLst.map((toast, idx) => {
+        prevToastLst.map((toast) => {
           return toast.id === toastToEdit.id ? toastToEdit : toast;
         })
       );
@@ -151,15 +146,21 @@ const ToastProvider: FC<Props> = ({ children }) => {
           <div
             key={i}
             className={`notification toast top-right ${
-              toast.remove && "remove-toast"
+              toast.remove ? "remove-toast" : ""
             }
-            ${toast.added && "add-toast"}`}
+            ${toast.added ? "add-toast" : ""}`}
             style={{ backgroundColor: toast.backgroundColor }}
-            onAnimationEnd={() =>
-              animationEnd(toast.id, toast.remove, toast.added)
-            }
+            onAnimationEnd={() => {
+              animationEnd(toast.id, toast.remove, toast.added);
+            }}
           >
-            <button onClick={() => applyRemoveAnimation(toast.id)}>X</button>
+            <button
+              onClick={() => {
+                applyRemoveAnimation(toast.id);
+              }}
+            >
+              X
+            </button>
             <div className="notification-image">{toast.icon}</div>
             <div>
               <p className="notification-title">{toast.title}</p>

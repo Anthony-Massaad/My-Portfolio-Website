@@ -1,7 +1,9 @@
 "use client";
 
-import { Transition, Variants, motion } from "framer-motion";
-import { FC, useEffect, useState } from "react";
+import type { Transition, Variants} from "framer-motion";
+import { motion } from "framer-motion";
+import type { FC} from "react";
+import { useEffect, useState } from "react";
 
 const ContainerVariants: Variants = {
   initial: {
@@ -37,7 +39,7 @@ const TripleDotLoader: FC = () => {
     const timer = setTimeout(() => {
       setAnimationState(!animationState);
     }, 900);
-    return () => clearTimeout(timer);
+    return () => { clearTimeout(timer); };
   }, [animationState]);
 
   return (

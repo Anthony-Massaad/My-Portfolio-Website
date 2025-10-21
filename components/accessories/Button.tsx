@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
-interface Props {
+type Props = {
   children: ReactNode;
   className?: string;
   to: string;
@@ -35,7 +35,7 @@ const Button: FC<Props> = ({
       className={`btn${noText ? " fully-rounded" : ""}${
         alternateColor ? " alternate-color" : ""
       }${className ? ` ${className}` : ""}`}
-      target={`${newTab ? "_blank" : ""}`}
+      target={newTab ? "_blank" : ""}
     >
       {children}
     </Link>

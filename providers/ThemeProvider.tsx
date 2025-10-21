@@ -1,14 +1,15 @@
 "use client";
 
-import { FC, ReactNode, createContext, useEffect, useState } from "react";
+import type { FC, ReactNode} from "react";
+import { createContext, useEffect, useState } from "react";
 
-interface Props {
+type Props = {
   children: ReactNode;
 }
 
 type Theme = "light" | "dark";
 
-interface ThemeContextProps {
+type ThemeContextProps = {
   theme: Theme;
   toggleTheme: () => void;
 }

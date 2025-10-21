@@ -1,12 +1,14 @@
 "use client";
 
-import { FC, useContext, useEffect } from "react";
-import { Variants, animate, motion, useAnimation } from "framer-motion";
+import type { FC} from "react";
+import { useContext, useEffect } from "react";
+import type { Variants} from "framer-motion";
+import { animate, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { map } from "lodash";
 import { headerData } from "@/data/headerData";
 import { SectionProviderContext } from "@/providers/SectionProvider";
-import { SectionHref, SectionName } from "@/types/types";
+import type { SectionHref, SectionName } from "@/types/types";
 
 const variantsUl = {
   open: {
@@ -36,7 +38,7 @@ const variantsLi: Variants = {
   },
 } as const;
 
-interface Props {
+type Props = {
   linkClick: (e: any, href: SectionHref, name: SectionName) => void;
   isHamburgerOpen: boolean;
 }
@@ -71,8 +73,8 @@ const Navigation: FC<Props> = ({ linkClick, isHamburgerOpen }) => {
           >
             <Link
               href={link.hash}
-              className={`${activeSection === link.name ? "active" : ""}`}
-              onClick={(e: any): void => linkClick(e, link.hash, link.name)}
+              className={activeSection === link.name ? "active" : ""}
+              onClick={(e: any): void => { linkClick(e, link.hash, link.name); }}
             >
               {link.name}
             </Link>

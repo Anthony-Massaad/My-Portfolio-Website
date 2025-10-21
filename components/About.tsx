@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import type { FC } from "react";
 import SectionHeading from "./accessories/SectionHeading";
 import Container from "./Container";
 import Link from "next/link";

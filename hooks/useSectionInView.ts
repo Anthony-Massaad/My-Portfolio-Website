@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionProviderContext } from "@/providers/SectionProvider";
-import { SectionName } from "@/types/types";
+import type { SectionName } from "@/types/types";
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 

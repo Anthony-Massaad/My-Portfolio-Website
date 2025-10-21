@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import type { FC } from "react";
 import SectionHeading from "./accessories/SectionHeading";
 import { experienceData } from "@/data/experienceData";
 import { map } from "lodash";
@@ -27,7 +27,7 @@ const Experience: FC = () => {
                 <ScaleUp>{item.icon}</ScaleUp>
               </span>
               <HoriztonalFade
-                direction={`${idx % 2 === 1 ? "fade-left" : "fade-right"}`}
+                direction={idx % 2 === 1 ? "fade-left" : "fade-right"}
               >
                 <div className={`content${idx % 2 === 1 ? " alternate" : ""}`}>
                   <div className="content-arrow"></div>

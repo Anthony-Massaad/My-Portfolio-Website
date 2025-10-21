@@ -1,8 +1,9 @@
 "use client";
 
-import { FC, ReactNode, useEffect } from "react";
+import type { FC, ReactNode} from "react";
+import { useEffect } from "react";
 
-interface Props {
+type Props = {
   children: ReactNode;
 }
 

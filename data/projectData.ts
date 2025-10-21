@@ -1,4 +1,4 @@
-interface ProjectInterface {
+type ProjectInterface = {
   name: string;
   language: string[];
   imgUrl: string;

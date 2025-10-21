@@ -1,6 +1,7 @@
 "use client";
 
-import { FC, useContext } from "react";
+import type { FC} from "react";
+import { useContext } from "react";
 import Button from "./Button";
 import { ThemeContext } from "@/providers/ThemeProvider";
 import { BsMoon, BsSun } from "react-icons/bs";

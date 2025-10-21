@@ -1,6 +1,7 @@
 "use client";
 
-import { FC, useContext } from "react";
+import type { FC} from "react";
+import { useContext } from "react";
 import Container from "./Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
