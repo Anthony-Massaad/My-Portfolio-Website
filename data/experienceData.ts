@@ -1,4 +1,4 @@
-import { FunctionComponentElement, createElement } from "react";
+import { ReactElement, createElement } from "react";
 import { IconBaseProps } from "react-icons";
 import { GrLocation } from "react-icons/gr";
 
@@ -6,15 +6,15 @@ export interface ExperienceDataInterface {
   name: string;
   role: string;
   date: string;
-  icon: FunctionComponentElement<IconBaseProps>;
+  icon: ReactElement<IconBaseProps, React.FunctionComponent<IconBaseProps>>;
   content: string[];
 }
 
 export const experienceData: ExperienceDataInterface[] = [
   {
-    name: "Ericsson (Present)",
+    name: "Ericsson",
     role: "Network Automation and Test/Software Developer",
-    date: "Nov 2024 - Present",
+    date: "Nov. 2024 - Present",
     icon: createElement(GrLocation),
     content: [
       `Provided lab support through Jira, diagnosing and resolving customer-reported incidents related to network, device configurations, test environments, and overall ensured timely closure of tickets to reduce downtime.`,
@@ -24,9 +24,9 @@ export const experienceData: ExperienceDataInterface[] = [
     ],
   },
   {
-    name: "Irdeto (8mos)",
+    name: "Irdeto",
     role: "Software Developer",
-    date: "Sept 2022 - Sept 2023",
+    date: "Sept. 2022 - Sept. 2023",
     icon: createElement(GrLocation),
     content: [
       `Collaborated with the Irdeto Reference Cloud App (IRCA) team in developing a web application using Next.js and TypeScript.`,
@@ -44,9 +44,9 @@ This streamlined the debugging process and reduced bug resolution.`,
     ],
   },
   {
-    name: "Elections Canada (1yr & 8mos)",
+    name: "Elections Canada",
     role: "Website Designer & Developer ",
-    date: "Jan 2022 - Oct 2023",
+    date: "Jan. 2022 - Oct. 2023",
     icon: createElement(GrLocation),
     content: [
       `Led the development of webpages within the Digital Transformation Branch, and utilized HTML, CSS, JavaScript, and JavaScript

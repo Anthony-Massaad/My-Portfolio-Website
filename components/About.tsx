@@ -21,7 +21,7 @@ const About: FC = () => {
               <p>
                 I am a{" "}
                 <span className="bold">
-                  software engineer with over 2 years of experience
+                  software engineer with over 3 years of experience
                 </span>{" "}
                 and a <span className="bold">Carleton University graduate</span>
                 . My passion lies in{" "}
@@ -67,11 +67,7 @@ const About: FC = () => {
                 >
                   Github profile
                 </Link>
-                . I am actively{" "}
-                <span className="bold">
-                  seeking full-time software developer
-                </span>{" "}
-                positions to further advance my career.
+                .
               </p>
             </div>
           </div>

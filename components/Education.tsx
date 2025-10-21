@@ -31,7 +31,7 @@ const Education: FC = () => {
             />
             <div className="summary">
               <h3>Carleton University</h3>
-              <p className="date">Sept 2019 - April 2024</p>
+              <p className="date">Sept. 2019 - Apr. 2024</p>
               <h4>Bachelor of Software Engineering with Co-op</h4>
             </div>
             <div className="info">

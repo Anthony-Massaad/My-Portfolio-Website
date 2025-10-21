@@ -8,6 +8,28 @@ interface ProjectInterface {
 
 export const projectsData: ProjectInterface[] = [
   {
+    name: "AI Flappy Bird",
+    language: ["Python", "Machine Learning"],
+    imgUrl: "/FlappyBird.png",
+    content: [
+      `Developed a fully functional Flappy Bird game using Python and Pygame, implementing realistic physics based mechanics for gravity, velocity, and collision detection to simulate natural bird motion`,
+      `Engineered a neural network from scratch and implemented neuroevolution using genetic algorithms, enabling each generation of agents to inherit and mutate weights from top performing parents for performance optimization`,
+      `Achieved autonomous gameplay with the best evolved bird trained`,
+    ],
+    github: "https://github.com/Anthony-Massaad/FlappyBird_NeuralNetwork",
+  },
+  {
+    name: "E-commerce Store Website",
+    language: ["Prisma", "React-Typescript", "scss"],
+    imgUrl: "/ECommerce.jpg",
+    content: [
+      `Developed a full-stack e-commerce web application replicating real-world shopping workflows using Next.js, TypeScript, and Prisma ORM with a PostgreSQL backend`,
+      `Leveraged PrimeReact and PrimeFlex for responsive UI components and layout structure, complemented by custom SCSS modules for extended styling and visual refinement`,
+      `Implemented JWT-based authentication with encrypted cookies to securely manage user sessions and persisted login states across browser sessions`,
+    ],
+    github: "https://github.com/Anthony-Massaad/store-website-nextjs",
+  },
+  {
     name: "Audio Genre Classifier",
     language: [
       "Python",
@@ -46,26 +68,16 @@ export const projectsData: ProjectInterface[] = [
     github: "https://github.com/Anthony-Massaad/Elevator-Simulator",
   },
   {
-    name: "Tetris",
-    language: ["Python"],
-    imgUrl: "/Tetris.png",
+    name: "Access Control System",
+    language: ["Python", "JSON", "RBAC", "ABAC", "Access Control Matrix"],
+    imgUrl: "/AccessControl.png",
     content: [
-      `GUI game tetris using the pygame module and Python.`,
-      `Implemented all of the features of the game such as rotations (use of linear algebra), speeding up, etc.`,
-      `Carefully commented the code for better understanding, and heavy use of OOP.`,
+      `Designed and implemented a role-based access control (RBAC) system to manage user authentication and authorization, granting users permissions based on predefined roles`,
+      `Integrated attribute-based access control (ABAC) to dynamically evaluate user attributes and contextual conditions, enforcing access restrictions during authentication and system use`,
+      `Enforced strong password policies through rule-based enforcement to ensure compliance with security best practices`,
+      `User Credentials are secured and hashed with a 32-byte salt`,
     ],
-    github: "https://github.com/Anthony-Massaad/Tetris",
-  },
-  {
-    name: "Chat Bot",
-    language: ["Python", "JSON"],
-    imgUrl: "/ChatBot.png",
-    content: [
-      `Developed an Artificial Intelligence chat messaging application using PySimpleGUI as the GUI framework for user input and AI responses. This application self-learns and improves based on user input data.`,
-      `Implemented the AI’s database using JSON consisting of tags, patterns, responses, and context to handle a flow of conversation.`,
-      `Used Deep Neural Network Model which takes in the parsed data, trains the bot to produce probability for accurate and precise responses.`,
-    ],
-    github: "https://github.com/Anthony-Massaad/ChatBot",
+    github: "https://github.com/Anthony-Massaad/software-security-access-control",
   },
   {
     name: "Art Store",

@@ -3,7 +3,7 @@
 import { FC, useContext, useEffect, useRef, useState } from "react";
 import { map } from "lodash";
 import Link from "next/link";
-import { Variants, motion, useAnimation, useCycle } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { headerData } from "@/data/headerData";
 import HamburgerButton from "./accessories/mobileMenu/HamburgerButton";
 import { SectionProviderContext } from "@/providers/SectionProvider";
