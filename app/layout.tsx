@@ -9,6 +9,7 @@ import SectionProvider from "@/providers/SectionProvider";
 import ThemeProvider from "@/providers/ThemeProvider";
 import ThemeToggleBtn from "@/components/accessories/ThemeToggleBtn";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SpeedInsights />
+      <Analytics />
       <body className={inter.className}>
         <ScrollToTop>
           <ThemeProvider>
