@@ -16,9 +16,12 @@ const FadeUp: FC<Props> = ({ children, delay = 0.175, style = {} }) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
+    const animate = async () => {
+      if (isInView) {
+        await mainControls.start("visible");
+      }
+    };
+    animate().catch(console.error);
   }, [isInView]);
 
   return (

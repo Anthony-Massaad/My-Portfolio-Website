@@ -2,7 +2,6 @@
 
 import type { FC } from "react";
 import Container from "./Container";
-import FadeUp from "@/motions/FadeUp";
 
 const Footer: FC = () => {
   return (

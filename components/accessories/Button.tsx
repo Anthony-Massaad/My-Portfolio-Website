@@ -10,7 +10,7 @@ type Props = {
   noText?: boolean;
   newTab?: boolean;
   alternateColor?: boolean;
-  action?: (e: any) => void;
+  action?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const Button: FC<Props> = ({
@@ -26,7 +26,7 @@ const Button: FC<Props> = ({
     <Link
       onClick={
         action
-          ? (e: any) => {
+          ? (e: React.MouseEvent<HTMLAnchorElement>) => {
               action(e);
             }
           : () => {}

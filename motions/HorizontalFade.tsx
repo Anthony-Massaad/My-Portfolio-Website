@@ -1,13 +1,13 @@
 import type { Variants } from "framer-motion";
 import { motion, useAnimation, useInView } from "framer-motion";
-import type { FC, ReactNode} from "react";
+import type { FC, ReactNode } from "react";
 import { useEffect, useMemo, useRef } from "react";
 
 type Props = {
   children: ReactNode;
   delay?: number;
   direction: "fade-left" | "fade-right";
-}
+};
 
 const HoriztonalFade: FC<Props> = ({ children, delay = 0.175, direction }) => {
   const ref = useRef(null);
@@ -28,9 +28,21 @@ const HoriztonalFade: FC<Props> = ({ children, delay = 0.175, direction }) => {
   useEffect(() => {}, []);
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
+    const animate = async () => {
+      if (isInView) {
+        await mainControls.start("visible");
+      }
+    };
+    animate().catch(console.error);
+  }, [isInView]);
+
+  useEffect(() => {
+    const animate = async () => {
+      if (isInView) {
+        await mainControls.start("visible");
+      }
+    };
+    animate().catch(console.error);
   }, [isInView]);
 
   return (

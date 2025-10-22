@@ -81,7 +81,7 @@ const Introduction: FC = () => {
               <Button
                 to="#contact"
                 alternateColor
-                action={(e: any) => {
+                action={(e: React.MouseEvent<HTMLAnchorElement>) => {
                   setActiveSection("Contact");
                   setTimeOfLastClick(Date.now());
                   scrollToSection(e, "#contact");

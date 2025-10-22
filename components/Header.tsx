@@ -15,7 +15,7 @@ import type { SectionHref, SectionName } from "@/types/types";
 
 const sidebarVarients: Variants = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 36px 35px)`,
+    clipPath: `circle(${String(height * 2 + 200)}px at 36px 35px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -45,7 +45,7 @@ const Header: FC = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-  const linkClick = (e: any, href: SectionHref, name: SectionName): void => {
+  const linkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: SectionHref, name: SectionName): void => {
     scrollToSection(e, href);
     setActiveSection(name);
     setTimeOfLastClick(Date.now());
@@ -120,7 +120,7 @@ const Header: FC = () => {
                     <Link
                       href={link.hash}
                       className={activeSection === link.name ? "active" : ""}
-                      onClick={(e: any): void =>
+                      onClick={(e: React.MouseEvent<HTMLAnchorElement>): void =>
                         { linkClick(e, link.hash, link.name); }
                       }
                     >

@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const ThemeToggleBtn: FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const toggle = (e: any): void => {
+  const toggle = (e: React.MouseEvent<HTMLAnchorElement>): void => {
     e.preventDefault();
     toggleTheme();
   };

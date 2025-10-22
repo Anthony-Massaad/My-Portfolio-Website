@@ -16,16 +16,19 @@ type ToastStructure = {
   icon: ReactElement<IconBaseProps, React.FunctionComponent<IconBaseProps>>;
 };
 
+type SeverityReturnStructure = {
+  backgroundColor: string;
+  icon: ReactElement<IconBaseProps, React.FunctionComponent<IconBaseProps>>;
+};
+
+type setToastStructure = {
+  severity: "success" | "error";
+  title: string;
+  description: string;
+};
+
 type ContextInterface = {
-  setToast: ({
-    severity,
-    title,
-    description,
-  }: {
-    severity: "success" | "error";
-    title: string;
-    description: string;
-  }) => void;
+  setToast: (toast: setToastStructure) => void;
 };
 
 export const ToastContext = createContext<ContextInterface>(
@@ -50,8 +53,11 @@ const ToastProvider: FC<Props> = ({ children }) => {
     };
   }, [toastLst]);
 
-  const severitySettings = (severity: "success" | "error") => {
-    let toastProperties = {};
+  const severitySettings = (
+    severity: "success" | "error"
+  ): SeverityReturnStructure => {
+    let toastProperties: SeverityReturnStructure =
+      {} as SeverityReturnStructure;
     switch (severity.toLowerCase()) {
       case "success":
         toastProperties = {
@@ -97,25 +103,19 @@ const ToastProvider: FC<Props> = ({ children }) => {
     severity,
     title,
     description,
-  }: {
-    severity: "success" | "error";
-    title: string;
-    description: string;
-  }) => {
+  }: setToastStructure): void => {
     const toastId = uniqueId();
     const set = severitySettings(severity);
-    setToastLst((prevLst: any) => {
-      return [
-        ...prevLst,
-        {
-          ...set,
-          id: toastId,
-          title: title,
-          description: description,
-          remove: false,
-          added: true,
-        },
-      ];
+    setToastLst((prevLst: ToastStructure[]): ToastStructure[] => {
+      const newToast: ToastStructure = {
+        ...set,
+        id: toastId,
+        title: title,
+        description: description,
+        remove: false,
+        added: true,
+      };
+      return [...prevLst, newToast];
     });
   };
 

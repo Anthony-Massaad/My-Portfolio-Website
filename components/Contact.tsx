@@ -25,11 +25,16 @@ const Contact: FC = () => {
 
   const { setToast } = useContext(ToastContext);
 
-  const handleSubmit = async (e: any): Promise<void> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setSendingEmail(true);
 
-    if (isEmpty(trim(e.target.message.value))) {
+    const form = e.currentTarget;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const subject = (form.elements.namedItem("subject") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    if (isEmpty(trim(message))) {
       setToast({
         severity: "error",
         title: "Oops!",
@@ -39,7 +44,7 @@ const Contact: FC = () => {
       return;
     }
 
-    if (isEmpty(trim(e.target.subject.value))) {
+    if (isEmpty(trim(subject))) {
       setToast({
         severity: "error",
         title: "Oops!",
@@ -50,9 +55,9 @@ const Contact: FC = () => {
     }
 
     const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      email: email,
+      subject: subject,
+      message: message,
     };
 
     const JSONdata = JSON.stringify(data);
@@ -131,7 +136,7 @@ const Contact: FC = () => {
               </div>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="form-container">
+          <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => void handleSubmit(e)} className="form-container">
             <FadeUp>
               <div className="top-layer">
                 <div>

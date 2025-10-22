@@ -1,11 +1,11 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import type { FC, ReactNode} from "react";
+import type { FC, ReactNode } from "react";
 import { useEffect, useRef } from "react";
 
 type Props = {
   children: ReactNode;
   delay?: number;
-}
+};
 
 const ScaleUp: FC<Props> = ({ children, delay = 0.175 }) => {
   const ref = useRef(null);
@@ -13,9 +13,12 @@ const ScaleUp: FC<Props> = ({ children, delay = 0.175 }) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
+    const animate = async () => {
+      if (isInView) {
+        await mainControls.start("visible");
+      }
+    };
+    animate().catch(console.error);
   }, [isInView]);
 
   return (

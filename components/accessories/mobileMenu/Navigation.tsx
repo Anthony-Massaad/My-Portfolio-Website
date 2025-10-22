@@ -1,9 +1,9 @@
 "use client";
 
-import type { FC} from "react";
+import type { FC } from "react";
 import { useContext, useEffect } from "react";
-import type { Variants} from "framer-motion";
-import { animate, motion, useAnimation } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { map } from "lodash";
 import { headerData } from "@/data/headerData";
@@ -39,20 +39,23 @@ const variantsLi: Variants = {
 } as const;
 
 type Props = {
-  linkClick: (e: any, href: SectionHref, name: SectionName) => void;
+  linkClick: (e: React.MouseEvent<HTMLAnchorElement>, href: SectionHref, name: SectionName) => void;
   isHamburgerOpen: boolean;
-}
+};
 
 const Navigation: FC<Props> = ({ linkClick, isHamburgerOpen }) => {
   const { activeSection } = useContext(SectionProviderContext);
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isHamburgerOpen) {
-      mainControls.start("open");
-    } else {
-      mainControls.start("closed");
-    }
+    const animate = async () => {
+      if (isHamburgerOpen) {
+        await mainControls.start("open");
+      } else {
+        await mainControls.start("closed");
+      }
+    };
+    animate().catch(console.error);
   }, [isHamburgerOpen]);
 
   return (
@@ -74,7 +77,9 @@ const Navigation: FC<Props> = ({ linkClick, isHamburgerOpen }) => {
             <Link
               href={link.hash}
               className={activeSection === link.name ? "active" : ""}
-              onClick={(e: any): void => { linkClick(e, link.hash, link.name); }}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>): void => {
+                linkClick(e, link.hash, link.name);
+              }}
             >
               {link.name}
             </Link>

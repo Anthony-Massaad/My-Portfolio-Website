@@ -8,7 +8,7 @@ export default tseslint.config(
     files: ["**/*.ts", "**/*.js", "**/*.tsx", "**/*.jsx"],
     languageOptions: {
       parserOptions: {
-        project: true,
+        project: "./tsconfig.json",
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -23,6 +23,9 @@ export default tseslint.config(
       "test/**",
       "node_modules/**",
       ".next/**",
+      "next.config.js",
+      "eslint.config.js",
+      "next-env.d.ts",
     ],
   },
   // Optional: Add custom rules or overrides here
@@ -30,7 +33,7 @@ export default tseslint.config(
     rules: {
       // Example: Disallow non-null assertions if desired
       // Overrides some @typescript-eslint rules
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+      "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
       "@typescript-eslint/consistent-indexed-object-style": [
         "error",
         "index-signature",
