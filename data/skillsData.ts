@@ -41,7 +41,12 @@ export const skillsData: SkillsInterface[] = [
       "Git",
       "Spring Boot",
       "Expo",
-      "Jenkins"
+      "Jenkins",
+      "Kubernetes",
+      "Docker",
+      "K6",
+      "FastAPI",
+      "PostgreSQL",
     ],
   },
   {

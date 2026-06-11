@@ -12,10 +12,28 @@ export type ExperienceDataInterface = {
 }
 
 export const experienceData: ExperienceDataInterface[] = [
-  {
-    name: "Ericsson",
-    role: "Network Automation and Test/Software Developer",
+   {
+    name: "Syntronic R&D Canada",
+    role: "Software Developer",
     date: "Nov. 2024 - Present",
+    icon: createElement(GrLocation),
+    content: [],
+   },
+   {
+    name: "Skytrac Project - Syntronic Contracted",
+    role: "Software Developer",
+    date: "Feb. 2026 - Jun. 2026",
+    icon: createElement(GrLocation),
+    content: [
+      `Spearheaded the modernization of Skytrac's REST API platform by migrating services from Python 2.7 to Python 3 and replacing the Bottle framework with FastAPI for powerful asynchronous operations. Leveraged k6 performance testing to identify bottlenecks and improve request throughput, response times, and overall service reliability under load. Improved success requests under normal and spike traffic test by 40% overall.`,
+      `Contributed to the establishment of a Kubernetes-based development environment by cloning and migrating the staging database, deploying FastAPI services, and troubleshooting cluster issues across AWS and local environments to improve development and testing workflows.`,
+      `Collaborated with cross-functional teams at Skytrac to optimize backend microservices by eliminating unnecessary caching across multiple subsystems, reducing computational overhead and improving service stability. Developed reusable pytest-based validation frameworks for log processing and database integrity testing, increasing test coverage and improving confidence in production deployments.`,
+    ],
+  },
+  {
+    name: "Ericsson Project - Syntronic Contracted",
+    role: "Network Automation and Test/Software Developer",
+    date: "Nov. 2024 - Jan. 2026",
     icon: createElement(GrLocation),
     content: [
       `Provided lab support through Jira, diagnosing and resolving customer-reported incidents related to network, device configurations, test environments, and overall ensured timely closure of tickets to reduce downtime.`,
